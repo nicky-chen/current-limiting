@@ -26,3 +26,5 @@ maxThreads：Tomcat能启动用来处理请求的最大线程数，如果请求�
 
 分布式系统也会有限流的需求。分布式服务关键需要把限流实现为原子化，解决方案可以使用Redis+Lua或者Nginx+Lua来实现。
 
+后续优化内容：https://note.youdao.com/share/?id=971ee5056c6cf61d967e733830531cc3#/
+
