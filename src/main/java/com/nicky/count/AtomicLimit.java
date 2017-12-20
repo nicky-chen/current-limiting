@@ -23,7 +23,7 @@ public class AtomicLimit {
     public static void main(final String[] args) throws Exception {
 
         final AtomicLimit atomicLimit = new AtomicLimit();
-        requestCount = new AtomicInteger(20);
+        requestCount = new AtomicInteger(-20);
         //1秒后所有线程同时启动
         final CountDownLatch latch = new CountDownLatch(1);
         //线程池

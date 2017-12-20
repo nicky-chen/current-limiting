@@ -5,6 +5,8 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -45,7 +47,8 @@ public class TimeLimit {
         final ThreadFactory factory = Executors.defaultThreadFactory();
         final RejectedExecutionHandler handler = new ThreadPoolExecutor.DiscardPolicy();
         final ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 2, TimeUnit.SECONDS,
-                new LinkedBlockingDeque<>(200), factory, handler);
+                new LinkedBlockingDeque<>(2), factory, handler);
+        List<Future> list = new ArrayList<>();
         for (int i = 1; i <= 50; i++) {
             final int index = i;
             Runnable task = () -> {

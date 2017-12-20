@@ -7,6 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CurrentLimitingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CurrentLimitingApplication.class, args);
+        SpringApplication.run(CurrentLimitingApplication.class, args);
 	}
 }
