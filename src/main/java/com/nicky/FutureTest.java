@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * @author nicky_chin [shuilianpiying@163.com]
  * @since --created on 2017/12/20 at 16:39
  * 拒绝策略设置为了 DiscardPolicy和DiscardOldestPolicy并且在被拒绝的任务的Future对象上调用无参get方法阻塞问题。
- * 解决方法 重写拒绝策略或者调用get方法时候传入时间参数，问题分析看源码
+ * 解决方法 重写拒绝策略或者调用get方法时候传入时间参数，问题分析看ThreadPoolExecutor源码
  */
 public class FutureTest {
 
